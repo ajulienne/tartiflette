@@ -8,7 +8,7 @@ module.exports = class Tartiflette {
         for (let el of json) {
             
             // Type of the element
-            const div = document.createElement(el.type || 'div');
+            const div = document.createElement(el.tag || 'div');
 
             // Inner text
             if (el.text) {

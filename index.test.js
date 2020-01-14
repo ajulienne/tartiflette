@@ -39,15 +39,15 @@ test('should create a single element with sub elements', () => {
 test('should create a list', () => {
     const el = document.createElement('div');
     Tartiflette.parse(el, [{
-        type: 'ul',
+        tag: 'ul',
         children: [
             {
                 text: 'el 1',
-                type: 'li'
+                tag: 'li'
             },
             {
                 text: 'el 2',
-                type: 'li'
+                tag: 'li'
             }
         ]
     }]);
