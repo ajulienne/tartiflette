@@ -18,6 +18,9 @@
   ],
   "author": "Antoine Julienne",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "jest": "^24.9.0"
   }
