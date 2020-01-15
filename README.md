@@ -1,5 +1,7 @@
 # Tartiflette
 
+[![Build Status](https://travis-ci.com/ajulienne/tartiflette.svg?branch=master)](https://travis-ci.com/ajulienne/tartiflette)
+
 Create a DOM tree from a JSON object.
 
 ## Usage
