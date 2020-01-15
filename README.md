@@ -26,9 +26,19 @@ const data = [
         text: 'Tartiflette generated list'
     },
     {
+        children: [
+            {
+                tag: 'a',
+                text: 'Tartiflette github',
+                href: 'https://github.com/ajulienne/tartiflette'
+            }
+        ]
+    },
+    {
         tag: 'img',
+        src: 'http://some-image.png',
+        alt: 'Alt text',
         attrs: {
-            src: 'http://some-image.png',
             title: 'Image title'
         }
     },
@@ -50,7 +60,8 @@ const data = [
         text: 'Click me!',
         dataset: {
             tartiflette: 'value'
-        }
+        },
+        classes: ['primary', 'large']
     }
 ];
 
@@ -62,11 +73,14 @@ This will yield the following HTML :
 ```html
 <div id="container">
     <h1>Tartiflette generated list</h1>
-    <img src="http://some-image.png" title="Image title">
+    <div>
+        <a href="https://github.com/ajulienne/tartiflette">Tartiflette github</a>
+    </div>
+    <img src="http://some-image.png" alt="Alt text" title="Image title">
     <ul>
         <li>first item</li>
         <li>second item</li>
     </ul>
-    <button data-tartiflette="value">Click me!</button>
+    <button class="primary large" data-tartiflette="value">Click me!</button>
 </div>
 ```
