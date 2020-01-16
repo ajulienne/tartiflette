@@ -8,15 +8,15 @@ script:
 
 deploy:
   - provider: npm
-  edge: true
-  email: "$NPM_EMAIL"
-  api_key: "$NPM_TOKEN"
-  on:
-    tags: true
-    repo: ajulienne/tartiflette
+    edge: true
+    email: "$NPM_EMAIL"
+    api_key: "$NPM_TOKEN"
+    on:
+      tags: true
+      repo: ajulienne/tartiflette
   - provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  on:
-    branch: master
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    keep_history: true
+    on:
+      branch: master
