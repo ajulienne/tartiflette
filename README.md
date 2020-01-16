@@ -17,51 +17,61 @@ Create a DOM tree from a JSON object.
   * `dataset`: object defining the data attributes of the node
   * `children`: array of children nodes.
 
+For ease of use and readability, some more common elements have dedicated attributes (instead of using the `attrs` object) :
+* `a`:
+  * `href`
+  * `target`
+* `img`:
+  * `src`
+  * `alt`
+  * `width`
+  * `height`
+
 ## Exemple
 
 ```javascript
 const data = [
     {
-        tag: 'h1',
-        text: 'Tartiflette generated list'
+        "tag": "h1",
+        "text": "Tartiflette generated list"
     },
     {
-        children: [
+        "children": [
             {
-                tag: 'a',
-                text: 'Tartiflette github',
-                href: 'https://github.com/ajulienne/tartiflette'
+                "tag": "a",
+                "text": "Tartiflette github",
+                "href": "https://github.com/ajulienne/tartiflette"
             }
         ]
     },
     {
-        tag: 'img',
-        src: 'http://some-image.png',
-        alt: 'Alt text',
-        attrs: {
-            title: 'Image title'
+        "tag": "img",
+        "src": "http://some-image.png",
+        "alt": "Alt text",
+        "attrs": {
+            "title": "Image title"
         }
     },
     {
-        tag: 'ul',
-        children: [
+        "tag": "ul",
+        "children": [
             {
-                tag: 'li',
-                text: 'first item'
+                "tag": "li",
+                "text": "first item"
             },
             {
-                tag: 'li',
-                text: 'second item'
+                "tag": "li",
+                "text": "second item"
             }
         ]
     },
     {
-        tag: 'button',
-        text: 'Click me!',
-        dataset: {
-            tartiflette: 'value'
+        "tag": "button",
+        "text": "Click me!",
+        "dataset": {
+            "tartiflette": "value"
         },
-        classes: ['primary', 'large']
+        "classes": ["primary", "large"]
     }
 ];
 
