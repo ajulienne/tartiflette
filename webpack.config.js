@@ -8,4 +8,5 @@ module.exports = {
         library: 'tartiflette',
         libraryTarget: 'umd'
     },
+    devtool: 'source-map'
 };
