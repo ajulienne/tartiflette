@@ -4,7 +4,7 @@
   "description": "Create DOM nodes from a JSON tree",
   "main": "dist/tartiflette.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode production",
     "test": "jest"
   },
   "repository": {
