@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Create DOM nodes from a JSON tree",
   "main": "dist/tartiflette.js",
+  "homepage": "https://ajulienne.github.io/tartiflette",
   "scripts": {
     "build": "webpack --mode production",
     "test": "jest"
