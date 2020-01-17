@@ -1,6 +1,6 @@
 {
   "name": "tartiflette",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Create DOM nodes from a JSON tree",
   "main": "dist/tartiflette.js",
   "homepage": "https://ajulienne.github.io/tartiflette",
