@@ -4,6 +4,40 @@
 
 Create a DOM tree from a JSON object.
 
+## Installation
+
+Get the lib from NPM :
+
+```bash
+npm install --save tartiflette
+```
+
+You can then import it in your JS files :
+
+```javascript
+// ES2015
+import * as Tartiflette from 'tartiflette';
+Tartiflette.parse(container; data);
+
+// CommonJS
+const Tartiflette = require('tartiflette');
+Tartiflette.parse(container; data);
+
+//AMD
+require(['tartiflette'], function(tartiflette) {
+    tartiflette.parse(container; data);
+});
+```
+
+You can also directly include the `tartiflette.js` file in your HTML and use the provided `tartiflette` object :
+
+```html
+<script type="text/javascript" src="https://unpkg.com/tartiflette/dist/tartiflette.js"></script>
+<script type="text/javascript">
+    tartiflette.parse(container, data);
+</script>
+```
+
 ## Usage
 
 `parse(container, json)` :
