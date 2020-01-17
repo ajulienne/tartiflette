@@ -4,6 +4,8 @@
 
 Create a DOM tree from a JSON object.
 
+Tartiflette aims to improve the code readability when you need to create DOM elements in javascript. You only need to define the elements you want to create in a JSON format that represents the tree, and to specify a container in which to append those elements.
+
 ## Installation
 
 Get the lib from NPM :
@@ -17,15 +19,15 @@ You can then import it in your JS files :
 ```javascript
 // ES2015
 import * as Tartiflette from 'tartiflette';
-Tartiflette.parse(container; data);
+Tartiflette.parse(container, data);
 
 // CommonJS
 const Tartiflette = require('tartiflette');
-Tartiflette.parse(container; data);
+Tartiflette.parse(container, data);
 
 //AMD
 require(['tartiflette'], function(tartiflette) {
-    tartiflette.parse(container; data);
+    tartiflette.parse(container, data);
 });
 ```
 
