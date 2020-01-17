@@ -6,18 +6,18 @@
 export function parse(container, json) {
     for (let el of json) {
 
-        const tag = el.tag || 'div';
+        const tag = el.tag || "div";
 
         // Type of the element
         const node = document.createElement(tag);
 
         // Syntaxic sugar for several often used elements (rather than specifying an attrs object)
         switch (tag.toLowerCase()) {
-            case 'a':
-                addAttributes(node, el, ['href', 'target']);
+            case "a":
+                addAttributes(node, el, ["href", "target"]);
                 break;
-            case 'img':
-                addAttributes(node, el, ['src', 'alt', 'width', 'height']);
+            case "img":
+                addAttributes(node, el, ["src", "alt", "width", "height"]);
                 break;
             default:
                 break;
@@ -28,7 +28,7 @@ export function parse(container, json) {
             node.innerText = el.text;
         }
         if (el.id) {
-            node.setAttribute('id', el.id);
+            node.setAttribute("id", el.id);
         }
 
         // CSS classes
