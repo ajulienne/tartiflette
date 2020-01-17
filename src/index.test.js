@@ -32,6 +32,22 @@ test('should create an anchor', () => {
     expect(el.firstElementChild.getAttribute('href')).toBe('https://github.com/ajulienne/tartiflette');
 });
 
+test('should not duplicate attribute', () => {
+    const el = document.createElement('div');
+    Tartiflette.parse(el, [{
+        text: 'anchor',
+        tag: 'a',
+        href: 'https://github.com/ajulienne/tartiflette',
+        attrs: {
+            href: 'http://wrong-href'
+        }
+    }]);
+    expect(el.childElementCount).toBe(1);
+    expect(el.firstElementChild.innerText).toBe('anchor');
+    expect(el.firstElementChild.tagName).toBe('A');
+    expect(el.firstElementChild.getAttribute('href')).toBe('https://github.com/ajulienne/tartiflette');
+});
+
 test('should create an image', () => {
     const el = document.createElement('div');
     Tartiflette.parse(el, [{

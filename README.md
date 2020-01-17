@@ -1,10 +1,75 @@
 # Tartiflette
 
-[![Build Status](https://travis-ci.com/ajulienne/tartiflette.svg?branch=master)](https://travis-ci.com/ajulienne/tartiflette)
+![Travis (.com)](https://img.shields.io/travis/com/ajulienne/tartiflette)
 
 Create a DOM tree from a JSON object.
 
 Tartiflette aims to improve the code readability when you need to create DOM elements in javascript. You only need to define the elements you want to create in a JSON format that represents the tree, and to specify a container in which to append those elements.
+
+### Without tartiflette
+
+```javascript
+const container = document.getElementById("container");
+
+const firstDiv = document.createElement("div");
+const paragraph = document.createElement("p");
+paragraph.innerText = "Some text."
+
+const anchor = document.createElement("a");
+anchor.setAttribute("href", "http://google.com");
+anchor.innerText = "Google";
+paragraph.append(anchor);
+firstDiv.append(paragraph);
+
+const list = document.createElement("ul");
+list.classList.add("somme-class");
+
+const firstItem = document.createElement("li");
+firstItem.innerText = "First item";
+
+const secondItem = document.createElement("li");
+secondItem.innerText = "Second item";
+
+list.append(firstItem);
+list.append(secondItem);
+container.append(firstDiv);
+container.append(list);
+```
+
+### With tartiflette
+
+```javascript
+const container = document.getElementById("container");
+
+const data = [
+    {
+        tag: 'div',
+        children: [
+            {
+                tag: 'a',
+                text: 'Google',
+                href: 'http://google.com'
+            }
+        ]
+    },
+    {
+        tag: 'ul',
+        classes: ['some-class'],
+        children: [
+            {
+                tag: 'li',
+                text: 'First item'
+            },
+            {
+                tag: 'li',
+                text: 'Second item'
+            }
+        ]
+    }
+];
+
+Tartiflette.parse(container, data);
+```
 
 ## Installation
 

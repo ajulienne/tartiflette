@@ -41,7 +41,7 @@ export function parse(container, json) {
         // Element attributes (such as class, title, etc..)
         if (el.attrs) {
             for (const key in el.attrs) {
-                if (!node.hasAttribute(el.attrs[key])) {
+                if (!node.hasAttribute(key)) {
                     node.setAttribute(key, el.attrs[key]);
                 }
             }
