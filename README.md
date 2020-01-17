@@ -1,6 +1,9 @@
 # Tartiflette
 
-![Travis (.com)](https://img.shields.io/travis/com/ajulienne/tartiflette)
+[![Build Status](https://travis-ci.com/ajulienne/tartiflette.svg?branch=master)](https://travis-ci.com/ajulienne/tartiflette)
+[![codecov](https://codecov.io/gh/ajulienne/tartiflette/branch/master/graph/badge.svg)](https://codecov.io/gh/ajulienne/tartiflette)
+
+
 
 Create a DOM tree from a JSON object.
 
