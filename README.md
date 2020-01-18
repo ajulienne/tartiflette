@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.com/ajulienne/tartiflette.svg?branch=master)](https://travis-ci.com/ajulienne/tartiflette)
 [![codecov](https://codecov.io/gh/ajulienne/tartiflette/branch/master/graph/badge.svg)](https://codecov.io/gh/ajulienne/tartiflette)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0800ca0cbfd64c3db38486ee2d3892de)](https://www.codacy.com/manual/antoine.julienne/tartiflette?utm_source=github.com&utm_medium=referral&utm_content=ajulienne/tartiflette&utm_campaign=Badge_Grade)
 
 Create a DOM tree from a JSON object.
 
