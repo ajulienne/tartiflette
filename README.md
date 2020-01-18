@@ -112,24 +112,39 @@ You can also directly include the `tartiflette.js` file in your HTML and use the
 
 `parse(container, json)` :
 
-  * `container`: DOM Element in which to append the created elements
-  * `json`: Array of nodes. Each node can have the following :
-    * `text`: inner text
-    * `tag`: tag of the element. Default to `div`.
-    * `id`: value of the `id` attribute
-    * `attrs`: object defining the attributes of the node
-    * `dataset`: object defining the data attributes of the node
-    * `children`: array of children nodes.
+-  `container`: DOM Element in which to append the created elements
+
+-  `json`: Array of nodes. Each node can have the following :
+
+  -  `text`: inner text
+
+  -  `tag`: tag of the element. Default to `div`.
+
+  -  `id`: value of the `id` attribute
+
+  -  `attrs`: object defining the attributes of the node
+
+  -  `dataset`: object defining the data attributes of the node
+
+  -  `children`: array of children nodes.
 
 For ease of use and readability, some more common elements have dedicated attributes (instead of using the `attrs` object) :
-  * `a`:
-    * `href`
-    * `target`
-  * `img`:
-    * `src`
-    * `alt`
-    * `width`
-    * `height`
+
+-  `a`:
+
+  -  `href`
+
+  -  `target`
+
+-  `img`:
+
+  -  `src`
+
+  -  `alt`
+
+  -  `width`
+  
+  -  `height`
 
 ## Exemple
 
