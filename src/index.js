@@ -42,7 +42,7 @@ export function parse(container, json) {
         if (el.attrs) {
             for (const key in el.attrs) {
                 if (!node.hasAttribute(key)) {
-                    node.setAttribute(key, el.attrs[key]);
+                    node.setAttribute(key, el.attrs[`${key}`]);
                 }
             }
         }
@@ -50,7 +50,9 @@ export function parse(container, json) {
         // Element custom data (dataset)
         if (el.dataset) {
             for (const key in el.dataset) {
-                node.dataset[key] = el.dataset[key];
+                if (!node.dataset.hasOwnProperty(key)) {
+                    node.dataset[`${key}`] = el.dataset[`${key}`];
+                }
             }
         }
 
@@ -65,8 +67,8 @@ export function parse(container, json) {
 
 function addAttributes(node, el, attributes) {
     for (let a of attributes) {
-        if (el[a]) {
-            node.setAttribute(a, el[a]);
+        if (el[`${a}`]) {
+            node.setAttribute(a, el[`${a}`]);
         }
     }
 }
