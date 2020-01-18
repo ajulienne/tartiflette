@@ -116,7 +116,7 @@ You can also directly include the `tartiflette.js` file in your HTML and use the
 
 -   `json`: Array of nodes. Each node can have the following :
 
-   - `text`: inner text
+    - `text`: inner text
     - `tag`: tag of the element. Default to `div`.
     - `id`: value of the `id` attribute
     - `attrs`: object defining the attributes of the node

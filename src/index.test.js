@@ -37,15 +37,12 @@ test("should not duplicate attribute", () => {
     Tartiflette.parse(el, [{
         text: "anchor",
         tag: "a",
-        href: "https://github.com/ajulienne/tartiflette",
+        href: "http://correct-href",
         attrs: {
             href: "http://wrong-href"
         }
     }]);
-    expect(el.childElementCount).toBe(1);
-    expect(el.firstElementChild.innerText).toBe("anchor");
-    expect(el.firstElementChild.tagName).toBe("A");
-    expect(el.firstElementChild.getAttribute("href")).toBe("https://github.com/ajulienne/tartiflette");
+    expect(el.firstElementChild.getAttribute("href")).toBe("http://correct-href");
 });
 
 test("should create an image", () => {
