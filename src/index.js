@@ -1,3 +1,11 @@
+function addAttributes(node, el, attributes) {
+    for (let a of attributes) {
+        if (el[`${a}`]) {
+            node.setAttribute(a, el[`${a}`]);
+        }
+    }
+}
+
 /**
  * Parse the json data and create the element tree
  * @param container Element in which to append the tree
@@ -62,13 +70,5 @@ export function parse(container, json) {
         }
 
         container.append(node);
-    }
-}
-
-function addAttributes(node, el, attributes) {
-    for (let a of attributes) {
-        if (el[`${a}`]) {
-            node.setAttribute(a, el[`${a}`]);
-        }
     }
 }

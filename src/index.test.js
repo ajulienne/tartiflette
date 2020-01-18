@@ -120,7 +120,7 @@ test("should create an element with an ID", () => {
 
 test("should create an element with a title attribute", () => {
     const el = document.createElement("div");
-    const str = "element title"
+    const str = "element title";
     Tartiflette.parse(el, [{
         text: "element",
         attrs: {
@@ -132,7 +132,7 @@ test("should create an element with a title attribute", () => {
 
 test("should create an element with a data attribute", () => {
     const el = document.createElement("div");
-    const value = "some value"
+    const value = "some value";
     Tartiflette.parse(el, [{
         text: "element",
         dataset: {
